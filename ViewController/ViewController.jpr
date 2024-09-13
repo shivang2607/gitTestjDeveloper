@@ -249,10 +249,13 @@
             <value n="id" v="ADF DVT Faces Databinding MDS Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
+<<<<<<< HEAD
          <hash>
             <value n="id" v="Oracle JEWT"/>
             <value n="isJDK" v="false"/>
          </hash>
+=======
+>>>>>>> 25716688273efaee216c53f302f246418316f724
       </list>
       <list n="libraryReferences">
          <hash>
@@ -327,10 +330,13 @@
             <value n="id" v="ADF DVT Faces Databinding MDS Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
+<<<<<<< HEAD
          <hash>
             <value n="id" v="Oracle JEWT"/>
             <value n="isJDK" v="false"/>
          </hash>
+=======
+>>>>>>> 25716688273efaee216c53f302f246418316f724
       </list>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectPaths">
@@ -438,6 +444,7 @@
             <value n="URI" v="http://xmlns.oracle.com/adf/faces/rich/component"/>
             <value n="version" v="11"/>
          </hash>
+<<<<<<< HEAD
          <hash>
             <hash n="baseLibrary">
                <value n="name" v="ADF Data Visualization"/>
@@ -448,6 +455,8 @@
             <value n="URI" v="http://xmlns.oracle.com/dss/adf/faces"/>
             <value n="version" v="1.1"/>
          </hash>
+=======
+>>>>>>> 25716688273efaee216c53f302f246418316f724
       </list>
    </hash>
    <hash n="oracle.jdevimpl.webapp.jsp.libraries.model.ProjectTagLibraries">
@@ -485,6 +494,7 @@
             <value n="URI" v="http://xmlns.oracle.com/adf/faces/rich"/>
             <value n="version" v="11"/>
          </hash>
+<<<<<<< HEAD
          <hash>
             <hash n="baseLibrary">
                <value n="name" v="ADF Data Visualization"/>
@@ -496,6 +506,8 @@
             <value n="URI" v="http://xmlns.oracle.com/dss/adf/faces"/>
             <value n="version" v="1.1"/>
          </hash>
+=======
+>>>>>>> 25716688273efaee216c53f302f246418316f724
       </list>
    </hash>
 </jpr:project>
