@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SysC009722240Link"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  EntityAssociation="g6.model.entities.SysC009722240Assoc">
+  <ViewLinkDefEnd
+    Name="AppointmentsVO"
+    Cardinality="1"
+    Source="true"
+    Owner="g6.model.views.AppointmentsVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="AppointmentsVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.views.AppointmentsVO.AppointmentId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="PrescriptionsVO"
+    Cardinality="-1"
+    Owner="g6.model.views.PrescriptionsVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="PrescriptionsVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.views.PrescriptionsVO.AppointmentId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

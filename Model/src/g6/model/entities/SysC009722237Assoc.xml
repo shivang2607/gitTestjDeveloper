@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SysC009722237Assoc"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="PatientEO"
+    Cardinality="1"
+    Source="true"
+    Owner="g6.model.entities.PatientEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="PatientEO"/>
+      <Attr Name="_foreignKey" Value="g6.model.entities.PatientEO.SysC009722229"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.PatientEO.PatientId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="AppointmentEO"
+    Cardinality="-1"
+    Owner="g6.model.entities.AppointmentEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="AppointmentEO"/>
+      <Attr Name="_foreignKey" Value="g6.model.entities.AppointmentEO.SysC009722237"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.AppointmentEO.PatientId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

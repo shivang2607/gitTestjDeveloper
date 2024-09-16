@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.11.57" id="DataBindings"
+             SeparateXMLFiles="false" Package="g6.view" ClientType="Generic">
+  <pageMap>
+    <page path="/Registration.jsf" usageId="g6_view_RegistrationPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="g6_view_RegistrationPageDef" path="g6.view.pageDefs.RegistrationPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="HospitalManagementServiceDataControl" Package="g6.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="HospitalManagementServiceLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

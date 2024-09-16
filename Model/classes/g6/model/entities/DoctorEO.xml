@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="DoctorEO"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="G6_DOCTORS"
+  AliasName="DoctorEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="DoctorId"
+    IsNotNull="true"
+    ColumnName="DOCTOR_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="G6_DOCTORS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Name"
+    IsNotNull="true"
+    Precision="255"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="G6_DOCTORS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="255"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Specialisation"
+    IsNotNull="true"
+    Precision="100"
+    ColumnName="SPECIALISATION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="G6_DOCTORS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Location"
+    Precision="100"
+    ColumnName="LOCATION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="G6_DOCTORS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Experience"
+    ColumnName="EXPERIENCE"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="G6_DOCTORS"/>
+  <Attribute
+    Name="ConsultingFee"
+    ColumnName="CONSULTING_FEE"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="G6_DOCTORS"/>
+  <Attribute
+    Name="ContactNo"
+    Precision="50"
+    ColumnName="CONTACT_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="G6_DOCTORS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Address"
+    Precision="255"
+    ColumnName="ADDRESS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="G6_DOCTORS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="255"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedAt"
+    ColumnName="CREATED_AT"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="G6_DOCTORS"/>
+  <Attribute
+    Name="Temp1"
+    Precision="255"
+    ColumnName="TEMP1"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="G6_DOCTORS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="255"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Temp2"
+    Precision="255"
+    ColumnName="TEMP2"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="G6_DOCTORS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="255"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Temp3"
+    Precision="255"
+    ColumnName="TEMP3"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="G6_DOCTORS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="255"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Temp4"
+    ColumnName="TEMP4"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="G6_DOCTORS"/>
+  <Attribute
+    Name="Temp5"
+    ColumnName="TEMP5"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="G6_DOCTORS"/>
+  <AccessorAttribute
+    Name="AppointmentEO"
+    Association="g6.model.entities.SysC009722236Assoc"
+    AssociationEnd="g6.model.entities.SysC009722236Assoc.AppointmentEO"
+    AssociationOtherEnd="g6.model.entities.SysC009722236Assoc.DoctorEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="UserEO"
+    Association="g6.model.entities.SysC009722225Assoc"
+    AssociationEnd="g6.model.entities.SysC009722225Assoc.UserEO"
+    AssociationOtherEnd="g6.model.entities.SysC009722225Assoc.DoctorEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="SysC009722223"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C009722223"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.DoctorEO.DoctorId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC009722225">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="SYS_C009722218"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="SYS_C009722225"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.DoctorEO.DoctorId"/>
+    </AttrArray>
+  </Key>
+</Entity>
