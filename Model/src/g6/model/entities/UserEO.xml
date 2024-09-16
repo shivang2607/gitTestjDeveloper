@@ -53,7 +53,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="G6_USERS">
+    TableName="G6_USERS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -65,7 +66,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="G6_USERS">
+    TableName="G6_USERS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="255"/>
     </DesignTime>
@@ -77,7 +79,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="G6_USERS">
+    TableName="G6_USERS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="255"/>
     </DesignTime>
@@ -161,6 +164,42 @@
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <Key
+    Name="G6UsersSecurityAnswerCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"SECURITY_ANSWER" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6USERS_SECURITY_ANSWER_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.UserEO.SecurityAnswer"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="G6UsersSecurityQuestionCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"SECURITY_QUESTION" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6USERS_SECURITY_QUESTION_CHEC"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.UserEO.SecurityQuestion"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="G6UsersUserTypeCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"USER_TYPE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6USERS_USER_TYPE_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.UserEO.UserType"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="SysC009722217">
     <DesignTime>
       <Attr Name="_checkCondition" Value="User_Type IN ('Patient', 'Doctor', 'Admin')"/>
@@ -188,5 +227,14 @@
     <AttrArray Name="Attributes">
       <Item Value="g6.model.entities.UserEO.Email"/>
     </AttrArray>
+  </Key>
+  <Key
+    Name="SysC009722343">
+    <DesignTime>
+      <Attr Name="_checkCondition" Value="User_Type IN ('Patient', 'Doctor', 'Admin')"/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="SYS_C009722343"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
   </Key>
 </Entity>

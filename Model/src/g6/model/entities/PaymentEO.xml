@@ -27,7 +27,8 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="G6_PAYMENTS"/>
+    TableName="G6_PAYMENTS"
+    IsNotNull="true"/>
   <Attribute
     Name="PaymentStatus"
     Precision="50"
@@ -123,6 +124,18 @@
     AssociationOtherEnd="g6.model.entities.SysC009722254Assoc.PaymentEO"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <Key
+    Name="G6PaymentsAmountCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"AMOUNT" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6PAYMENTS_AMOUNT_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.PaymentEO.Amount"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="SysC009722252">
     <DesignTime>

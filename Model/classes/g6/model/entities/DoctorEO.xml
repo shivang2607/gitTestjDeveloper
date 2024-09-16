@@ -52,7 +52,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="G6_DOCTORS">
+    TableName="G6_DOCTORS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
@@ -63,14 +64,16 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="G6_DOCTORS"/>
+    TableName="G6_DOCTORS"
+    IsNotNull="true"/>
   <Attribute
     Name="ConsultingFee"
     ColumnName="CONSULTING_FEE"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="G6_DOCTORS"/>
+    TableName="G6_DOCTORS"
+    IsNotNull="true"/>
   <Attribute
     Name="ContactNo"
     Precision="50"
@@ -78,7 +81,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="G6_DOCTORS">
+    TableName="G6_DOCTORS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -90,7 +94,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="G6_DOCTORS">
+    TableName="G6_DOCTORS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="255"/>
     </DesignTime>
@@ -166,6 +171,66 @@
     AssociationOtherEnd="g6.model.entities.SysC009722225Assoc.DoctorEO"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <Key
+    Name="G6DoctorsAddressCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"ADDRESS" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6DOCTORS_ADDRESS_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.DoctorEO.Address"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="G6DoctorsConsultingFeeCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"CONSULTING_FEE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6DOCTORS_CONSULTING_FEE_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.DoctorEO.ConsultingFee"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="G6DoctorsContactNoCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"CONTACT_NO" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6DOCTORS_CONTACT_NO_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.DoctorEO.ContactNo"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="G6DoctorsExperienceCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"EXPERIENCE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6DOCTORS_EXPERIENCE_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.DoctorEO.Experience"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="G6DoctorsLocationCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"LOCATION" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6DOCTORS_LOCATION_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.DoctorEO.Location"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="SysC009722223"
     PrimaryKey="true">

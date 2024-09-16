@@ -42,7 +42,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="G6_APPOINTMENTS">
+    TableName="G6_APPOINTMENTS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -54,7 +55,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="G6_APPOINTMENTS">
+    TableName="G6_APPOINTMENTS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -145,6 +147,30 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key
+    Name="G6AppointmentsStatusCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"STATUS" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6APPOINTMENTS_STATUS_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.AppointmentEO.Status"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="G6AppointmentsTimeSlotCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"TIME_SLOT" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6APPOINTMENTS_TIME_SLOT_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.AppointmentEO.TimeSlot"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="SysC009722234">
     <DesignTime>
       <Attr Name="_checkCondition" Value="Status IN ('Scheduled', 'Cancelled', 'Completed')"/>
@@ -162,6 +188,15 @@
     <AttrArray Name="Attributes">
       <Item Value="g6.model.entities.AppointmentEO.AppointmentId"/>
     </AttrArray>
+  </Key>
+  <Key
+    Name="SysC009722327">
+    <DesignTime>
+      <Attr Name="_checkCondition" Value="Status IN ('Scheduled', 'Cancelled', 'Completed')"/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="SYS_C009722327"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Key
     Name="SysC009722236">

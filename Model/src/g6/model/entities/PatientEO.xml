@@ -39,7 +39,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="G6_PATIENTS">
+    TableName="G6_PATIENTS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -51,7 +52,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="G6_PATIENTS">
+    TableName="G6_PATIENTS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="255"/>
     </DesignTime>
@@ -62,7 +64,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="G6_PATIENTS"/>
+    TableName="G6_PATIENTS"
+    IsNotNull="true"/>
   <Attribute
     Name="Gender"
     Precision="1"
@@ -72,7 +75,8 @@
     ColumnType="CHAR"
     TableName="G6_PATIENTS"
     RetrievedOnUpdate="true"
-    RetrievedOnInsert="true">
+    RetrievedOnInsert="true"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -84,7 +88,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="G6_PATIENTS">
+    TableName="G6_PATIENTS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="5"/>
     </DesignTime>
@@ -181,6 +186,66 @@
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <Key
+    Name="G6PatientsAddressCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"ADDRESS" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6PATIENTS_ADDRESS_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.PatientEO.Address"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="G6PatientsBloodGroupCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"BLOOD_GROUP" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6PATIENTS_BLOOD_GROUP_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.PatientEO.BloodGroup"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="G6PatientsContactNoCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"CONTACT_NO" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6PATIENTS_CONTACT_NO_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.PatientEO.ContactNo"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="G6PatientsDateOfBirthCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATE_OF_BIRTH" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6PATIENTS_DATE_OF_BIRTH_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.PatientEO.DateOfBirth"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="G6PatientsGenderCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"GENDER" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6PATIENTS_GENDER_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.PatientEO.Gender"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="SysC009722228">
     <DesignTime>
       <Attr Name="_checkCondition" Value="Gender IN ('M', 'F', 'O')"/>
@@ -198,6 +263,15 @@
     <AttrArray Name="Attributes">
       <Item Value="g6.model.entities.PatientEO.PatientId"/>
     </AttrArray>
+  </Key>
+  <Key
+    Name="SysC009722337">
+    <DesignTime>
+      <Attr Name="_checkCondition" Value="Gender IN ('M', 'F', 'O')"/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="SYS_C009722337"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Key
     Name="SysC009722231">

@@ -34,7 +34,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="G6_PRESCRIPTIONS">
+    TableName="G6_PRESCRIPTIONS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="255"/>
     </DesignTime>
@@ -46,7 +47,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="G6_PRESCRIPTIONS">
+    TableName="G6_PRESCRIPTIONS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="255"/>
     </DesignTime>
@@ -147,6 +149,30 @@
     AssociationOtherEnd="g6.model.entities.SysC009722240Assoc.PrescriptionEO"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <Key
+    Name="G6PrescriptionsMedicationCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"MEDICATION" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6PRESCRIPTIONS_MEDICATION_CHE"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.PrescriptionEO.Medication"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="G6PrescriptionsPrescriptionDosageCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"PRESCRIPTION_DOSAGE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="G6PRESCRIPTIONS_PRESCRIPTION_D"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="g6.model.entities.PrescriptionEO.PrescriptionDosage"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="SysC009722239"
     PrimaryKey="true">
